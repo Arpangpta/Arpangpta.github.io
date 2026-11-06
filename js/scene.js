@@ -427,10 +427,10 @@ applyTheme();
 // on: { component: [x, y, scale] } in stage units (stage is about 8 x 9).
 const STATES = {
   hero:       { web: { net: 1, x: "hero", ns: 1, nz: 0 }, dock: 0, on: {}, hud: "embedding space · <b>7 clusters</b> · 665 vectors" },
-  about:      { on: { docs: [0, 3.0, 1], db: [0, -2.2, 1] }, fx: { ingest: 1 }, hud: "ingesting · <b>pages split into chunks</b> for the vector DB" },
-  work:       { on: { db: [0, -2.3, 1], llm: [0, 2.4, 0.9] }, fx: { sort: 1, retrieve: 1, think: 0.6 }, hud: "RAG · <b>LLM retrieving context</b> from the vector DB" },
-  experience: { on: { llm: [0, 2.6, 0.9], mcp: [0, -2.2, 1] }, fx: { sort: 1, mcp: 1, think: 0.7 }, hud: "MCP · <b>LLM commanding tools</b> through the MCP server" },
-  projects:   { on: { llm: [0, 3.2, 0.7], agents: [0, -0.4, 1], mcp: [0, -3.7, 0.6] }, fx: { sort: 1, agents: 1, think: 1 }, hud: "agentic · <b>planner → researcher → executor → reviewer</b>" },
+  about:      { on: { docs: [0, 2.6, 1], db: [0, -1.9, 1] }, fx: { ingest: 1 }, hud: "ingesting · <b>pages split into chunks</b> for the vector DB" },
+  work:       { on: { db: [0, -1.9, 1], llm: [0, 2.2, 0.9] }, fx: { sort: 1, retrieve: 1, think: 0.6 }, hud: "RAG · <b>LLM retrieving context</b> from the vector DB" },
+  experience: { on: { llm: [0, 2.2, 0.9], mcp: [0, -1.8, 1] }, fx: { sort: 1, mcp: 1, think: 0.7 }, hud: "MCP · <b>LLM commanding tools</b> through the MCP server" },
+  projects:   { on: { llm: [0, 2.9, 0.65], agents: [0, -0.2, 0.95], mcp: [0, -3.2, 0.55] }, fx: { sort: 1, agents: 1, think: 1 }, hud: "agentic · <b>planner → researcher → executor → reviewer</b>" },
   skills:     { on: { llm: [0, 0.4, 1.05], judge: [0, 0.4, 1.05] }, fx: { sort: 1, tokens: 1, judge: 1, think: 0.5 }, hud: "evaluating · <b>LLM-as-judge</b> · 95.6% on 191 questions" },
   beyond:     { web: { net: 0.7, x: "anchor", ns: 0.28, nz: -2 }, zoom: 1, fx: { sort: 1 }, hud: "zooming out · <b>the bigger picture</b>" },
   contact:    { web: { net: 0.55, x: 0, ns: 1.45, nz: -1 }, zoom: 1, dock: 0, fx: { sort: 1 }, hud: "the whole system · <b>ready for your message</b>" },
@@ -470,8 +470,11 @@ function resize() {
   if (desktop) {
     const edge = Math.min(120, Math.max(40, 0.06 * w)) + Math.min(860, 0.58 * w);
     screenToWorld(((edge + w) / 2 + 20) / w, 0.52, 0, anchor);
-    const [hw] = frustumHalf(0);
-    stageBase = Math.min(0.85, Math.max(0.5, (((w - edge) / w) * 2 * hw) / 9));
+    // Fill the space right of the text: limited by its width and by the screen height.
+    const [hw, hh] = frustumHalf(0);
+    const byWidth = (((w - edge) / w) * 2 * hw) / 7.2;
+    const byHeight = (2 * hh * 0.9) / 8.6;
+    stageBase = Math.min(1.75, Math.max(0.6, Math.min(byWidth, byHeight)));
     heroX = 4.2;
   } else {
     anchor.set(0, -3, 0); stageBase = 0.7; heroX = 0;
@@ -543,7 +546,7 @@ function frame(now) {
     ctrl.copy(c.dock).lerp(stageW, 0.5).add(tmp.set(0, 1.5, 4));
     quadBezier(c.dock, ctrl, stageW, a, c.pos);
     c.group.position.copy(c.pos);
-    const s = lerp(0.5, c.lscale * stageBase, a) * (1 - zoomP * 0.92);
+    const s = lerp(0.6, c.lscale * stageBase, a) * (1 - zoomP * 0.92);
     c.group.scale.setScalar(Math.max(0.001, s));
     c.group.rotation.y = pointer.x * 0.15 * a + Math.sin(time * 0.3 + c.dockSlot[1] * 9) * 0.12 * (1 - a);
     c.group.rotation.z = Math.sin(time * 0.4 + c.dockSlot[0] * 7) * 0.05 * (1 - a);
