@@ -135,7 +135,7 @@ p { margin: 0 0 1em; }
    stays fully visible in the side margins. --scene-center animates the fade. */
 @property --scene-center { syntax: "<number>"; inherits: true; initial-value: 1; }
 /* --text-edge: where the left text column ends. The story stage plays to the right of it. */
-:root { --text-left: clamp(40px, 6vw, 120px); --text-width: min(760px, 54vw); --text-edge: 100vw; }
+:root { --text-left: clamp(40px, 6vw, 120px); --text-width: min(860px, 58vw); --text-edge: 100vw; }
 @media (min-width: 1100px) { :root { --text-edge: calc(var(--text-left) + var(--text-width)); } }
 #bg-canvas {
   --scene-center: 1;
@@ -143,7 +143,7 @@ p { margin: 0 0 1em; }
           mask-image: linear-gradient(90deg, rgba(0,0,0,var(--scene-center)) 0, rgba(0,0,0,var(--scene-center)) var(--text-edge), #000 calc(var(--text-edge) + 90px), #000 100%);
   transition: --scene-center 0.9s var(--ease);
 }
-.scene-reading #bg-canvas { --scene-center: 0.12; }
+.scene-reading #bg-canvas { --scene-center: 0.6; }
 
 
 main, .footer { position: relative; z-index: 1; }
