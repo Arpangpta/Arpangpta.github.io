@@ -1,203 +1,344 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-13X235WPXB"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-13X235WPXB');
+  </script>
 
-<html>
-	<head>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-13X235WPXB"></script>
-		<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Arpan Gupta | AI Product Engineer</title>
+  <meta name="description" content="Arpan Gupta, AI Product Engineer building production LLM systems: multi-tenant RAG, multi-agent workflows, LLM evaluation and conversational AI on AWS." />
+  <meta name="theme-color" content="#05060a" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Arpan Gupta | AI Product Engineer" />
+  <meta property="og:description" content="Production RAG, multi-agent workflows and LLM evaluation on AWS Bedrock." />
+  <meta property="og:url" content="https://arpangpta.github.io/" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%2322d3ee'/%3E%3Cstop offset='1' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='14' fill='%2305060a'/%3E%3Ctext x='32' y='42' font-family='Arial' font-weight='700' font-size='28' text-anchor='middle' fill='url(%23g)'%3EAG%3C/text%3E%3C/svg%3E" />
 
-		gtag('config', 'G-13X235WPXB');
-		</script>
-		
-		<title>Arpan's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+</head>
+<body>
+  <div class="scroll-progress" aria-hidden="true"></div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<a href="index.html" class="logo"><strong>Dashboard</strong> <!--<span>by HTML5 UP</span> --></a> 
-						<nav>
-							<a href="#menu">Menu</a>
-						</nav>
-					</header>
+  <!-- Navigation -->
+  <header class="nav" id="nav">
+    <a href="#top" class="nav__logo" aria-label="Back to top"><span class="grad">AG</span><span class="nav__dot"></span></a>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span>
+    </button>
+    <nav id="nav-links" class="nav__links">
+      <a href="#about">About</a>
+      <a href="#work">What I Build</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav__cta">Contact</a>
+    </nav>
+  </header>
 
-				<!-- Menu -->
-				<nav id="menu">
-					<ul class="links">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="skills.html">Skills</a></li>
-						<li><a href="project.html">Projects</a></li>
-						<li><a href="work_exp.html">Work Experience</a></li>
-					</ul>
-				</nav>
+  <main id="top">
+    <!-- Hero with the 3D embedding-space scene -->
+    <section class="hero" id="hero">
+      <canvas id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero__fallback" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow mono reveal"><span class="pulse-dot"></span> AI Product Engineer &middot; India</p>
+        <h1 class="hero__title reveal">Arpan Gupta</h1>
+        <p class="hero__typed reveal" aria-live="polite">
+          I build <span class="typed grad" id="typed">production RAG systems</span><span class="caret" aria-hidden="true"></span>
+        </p>
+        <p class="hero__sub reveal">
+          LLM systems on AWS that hold up in production: retrieval that finds the right document,
+          agents with guardrails, and evaluations that prove the numbers moved.
+        </p>
+        <div class="hero__actions reveal">
+          <a href="#work" class="btn btn--primary">See what I build</a>
+          <a href="#contact" class="btn btn--ghost">Get in touch</a>
+        </div>
+      </div>
+      <a href="#about" class="hero__scroll mono" aria-label="Scroll to about">scroll<span></span></a>
+    </section>
 
-				<!-- Banner -->
-					<section id="banner" class="major">
-						<div class="inner">
-							<header class="major">
-								<h1>Hi, my name is Arpan Gupta</h1>
-							</header>
-							<div class="content">
-								<p>A recent graduate with past experience in software development, <br />
-								Degubbing Code and Maintaining applications. </p>
-								<ul class="actions">
-									<li><a href="#one" class="button next scrolly">Let me introduce</a></li>
-								</ul>
-							</div>
-						</div>
-					</section>
+    <!-- Impact metrics -->
+    <section class="metrics" aria-label="Impact in numbers">
+      <div class="metric reveal">
+        <div class="metric__value"><span class="count" data-to="95.6" data-decimals="1">0</span>%</div>
+        <div class="metric__label">RAG answer accuracy, up from 82.4% on a 191-question eval</div>
+      </div>
+      <div class="metric reveal">
+        <div class="metric__value"><span class="count" data-to="72">0</span>%</div>
+        <div class="metric__label">Fewer tokens per answer (66-72%) with no accuracy loss</div>
+      </div>
+      <div class="metric reveal">
+        <div class="metric__value"><span class="count" data-to="700">0</span>+</div>
+        <div class="metric__label">Automated tests on the agentic platform</div>
+      </div>
+      <div class="metric reveal">
+        <div class="metric__value"><span class="count" data-to="0">0</span></div>
+        <div class="metric__label">Confidently wrong document picks across 88 live queries</div>
+      </div>
+    </section>
 
-				<!-- Main -->
-					<div id="main">
+    <!-- About -->
+    <section class="section" id="about">
+      <div class="section__head reveal">
+        <span class="section__index mono">01</span>
+        <h2>About</h2>
+      </div>
+      <div class="about">
+        <div class="about__text reveal">
+          <p>
+            I'm an <strong>AI Product Engineer at ODEK Appcraft India</strong>, where I take LLM features from idea to production
+            for clients in travel, insurance and staffing. I hold an <strong>MSc in Artificial Intelligence &amp; Robotics</strong>
+            from the University of Glasgow and started my career as a backend engineer at Verizon and Infogain.
+          </p>
+          <p>
+            I care about the unglamorous parts that make AI products trustworthy: evaluation sets, routing, guardrails,
+            cost per call and latency. I'm an AI-first developer: most of what I ship today is built with
+            <strong>Claude Code</strong> and <strong>MCP</strong> in the loop.
+          </p>
+        </div>
+        <div class="about__card reveal tilt">
+          <div class="terminal">
+            <div class="terminal__bar"><span></span><span></span><span></span><em class="mono">whoami.json</em></div>
+<pre class="mono"><code>{
+  <span class="k">"role"</span>: <span class="s">"AI Product Engineer"</span>,
+  <span class="k">"focus"</span>: [<span class="s">"RAG"</span>, <span class="s">"agents"</span>, <span class="s">"evals"</span>],
+  <span class="k">"stack"</span>: [<span class="s">"Bedrock"</span>, <span class="s">"Claude"</span>, <span class="s">"Python"</span>, <span class="s">"TypeScript"</span>],
+  <span class="k">"education"</span>: <span class="s">"MSc AI &amp; Robotics, Glasgow"</span>,
+  <span class="k">"based_in"</span>: <span class="s">"India"</span>,
+  <span class="k">"open_to"</span>: <span class="s">"Applied AI roles"</span>
+}</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
 
-						<!-- One -->
-							<section id="one" class="tiles">
-								<article>
-									<span class="image">
-										<img src="IMG20230329201135.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="about_me.html" class="link">About Me</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic02.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="education.html" class="link">Education</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic03.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="work_exp.html" class="link">Work Experience</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic04.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="skills.html" class="link">Skills</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic05.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="hobbies.html" class="link">Hobbies</a></h3>
-									</header>
-								</article>
-								<article>
-									<span class="image">
-										<img src="images/pic06.jpg" alt="" />
-									</span>
-									<header class="major">
-										<h3><a href="project.html" class="link">Projects</a></h3>
-									</header>
-								</article>
-							</section>
+    <!-- What I build + animated pipeline -->
+    <section class="section" id="work">
+      <div class="section__head reveal">
+        <span class="section__index mono">02</span>
+        <h2>What I build</h2>
+      </div>
 
-						<!-- Two -->
-							<section id="two">
-								<div class="inner">
-									<p>
-										Thank you for your time and attention. Please feel free to contact me 
-										on any of my social media handles if you have any further questions or 
-										would like to connect.
-									</p>
-								</div>
-							</section>
+      <div class="pipeline reveal" aria-label="How a question flows through the RAG system I built">
+        <p class="pipeline__caption mono">how a question flows through my RAG service</p>
+        <div class="pipeline__track">
+          <div class="pipeline__line"><span class="pipeline__packet"></span></div>
+          <div class="stage"><span class="stage__icon">?</span><b>Question</b><small>staff portal, per-client config</small></div>
+          <div class="stage"><span class="stage__icon">&#9881;</span><b>Query stage</b><small>fix typos, split, route</small></div>
+          <div class="stage"><span class="stage__icon">&#8981;</span><b>Retrieve</b><small>vector search per part</small></div>
+          <div class="stage"><span class="stage__icon">&#8645;</span><b>Rerank</b><small>trim to what matters</small></div>
+          <div class="stage"><span class="stage__icon">&#10022;</span><b>Answer</b><small>Claude, grounded</small></div>
+          <div class="stage"><span class="stage__icon">&#10003;</span><b>Evaluate</b><small>LLM-as-judge, recall</small></div>
+        </div>
+      </div>
 
-					</div>
+      <div class="cards">
+        <article class="card reveal tilt">
+          <div class="card__tag mono">Production RAG</div>
+          <h3>Retrieval that finds the right document</h3>
+          <p>A multi-tenant RAG microservice live on client staff portals in travel and insurance, with per-client, per-use-case prompt and model configs.</p>
+          <ul>
+            <li>Accuracy 82.4% &rarr; 95.6%, tokens down 66-72%</li>
+            <li>LLM query stage that corrects, splits and routes questions</li>
+            <li>Off-topic questions refused 24 of 24 times</li>
+          </ul>
+        </article>
+        <article class="card reveal tilt">
+          <div class="card__tag mono">Retrieval R&amp;D</div>
+          <h3>Benchmarks, not guesses</h3>
+          <p>Compared S3 Vectors, OpenSearch and pgvector hybrid search, chunk sizes and reranker pools with recall and LLM-as-judge metrics.</p>
+          <ul>
+            <li>Picked the lowest-cost backend at equal quality</li>
+            <li>Ingestion-time LLM classifier: new knowledge bases with zero code changes</li>
+            <li>Evaluated self-hosted gpt-oss-20b on vLLM</li>
+          </ul>
+        </article>
+        <article class="card reveal tilt">
+          <div class="card__tag mono">Agentic Systems</div>
+          <h3>Agents with guardrails</h3>
+          <p>A multi-tenant platform for multi-agent workflows on Orkes Conductor with Bedrock tool calling and MCP tool servers.</p>
+          <ul>
+            <li>Database-driven guardrails: kill switch, RBAC, rate limits</li>
+            <li>Per-call cost tracking on every billable LLM call</li>
+            <li>LLM failure triage and daily AI-generated ops reports</li>
+          </ul>
+        </article>
+        <article class="card reveal tilt">
+          <div class="card__tag mono">Conversational AI</div>
+          <h3>Assistants people can talk to</h3>
+          <p>A voice-enabled booking assistant prototype for a luxury travel operator, built on Bedrock Agents with Lambda tools and structured JSON turns.</p>
+          <ul>
+            <li>Gathers trip needs in natural conversation</li>
+            <li>Recommends lodges, off-peak dates and offers</li>
+            <li>Rich cards for quotes and provisional bookings</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-				<!-- Contact -->
-					<section id="contact">
-						<div class="inner">
-							<section>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="6"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Clear" /></li>
-									</ul>
-								</form>
-							</section>
-							<section class="split">
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">itsapn.gupta@gmail.com</a>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(+44) 000-0000-000</span>
-									</div>
-								</section>
-								<section>
-									<div class="contact-method">
-										<span class="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>Glasgow, United Kingdom</span>
-									</div>
-								</section>
-							</section>
-						</div>
-					</section>
+    <!-- Experience timeline -->
+    <section class="section" id="experience">
+      <div class="section__head reveal">
+        <span class="section__index mono">03</span>
+        <h2>Experience</h2>
+      </div>
+      <ol class="timeline">
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono">Sep 2025 - Present</div>
+          <h3>AI Product Engineer <span>&middot; ODEK Appcraft India</span></h3>
+          <ul>
+            <li>Built and optimised a multi-tenant RAG microservice (TypeScript, Bedrock Knowledge Bases, S3 Vectors, Claude) used by travel and insurance clients.</li>
+            <li>Raised answer accuracy from 82.4% to 95.6% and cut tokens by 66-72% with an LLM query-routing stage.</li>
+            <li>Building a multi-agent platform on Orkes Conductor with MCP servers, guardrails and per-call cost tracking (700+ tests).</li>
+            <li>Delivered staff and freelancer portals from zero to production on Zoho Catalyst and Zoho CRM with AI-first development.</li>
+          </ul>
+          <div class="chips"><span>Bedrock</span><span>Claude</span><span>RAG</span><span>Orkes</span><span>MCP</span><span>TypeScript</span></div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono">Jun 2024 - Aug 2025</div>
+          <h3>Freelance Web Developer <span>&middot; Self-employed</span></h3>
+          <ul>
+            <li>Designed and built responsive websites for restaurants and cafes in Glasgow, with seasonal and festival campaign updates.</li>
+            <li>Integrated table booking, payment gateways and social media links to improve visibility and customer access.</li>
+            <li>Provided ongoing maintenance and feature updates based on client feedback.</li>
+          </ul>
+          <div class="chips"><span>JavaScript</span><span>Responsive design</span><span>Booking &amp; payments</span><span>Client delivery</span></div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono">Sep 2022 - May 2024</div>
+          <h3>MSc Artificial Intelligence &amp; Robotics <span>&middot; University of Glasgow</span></h3>
+          <ul>
+            <li>Graduated with a 2:1. Coursework in Machine Learning, Deep Learning, Conversational Systems, HCI and Robotics.</li>
+          </ul>
+          <div class="chips"><span>PyTorch</span><span>Deep Learning</span><span>ROS</span><span>Dialogue Systems</span></div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono">Apr 2022 - Sep 2022</div>
+          <h3>Software Development Engineer <span>&middot; Verizon Data Services</span></h3>
+          <ul>
+            <li>Built Django features and UIs for a device forum platform, speeding up backend response with caching and query optimisation.</li>
+            <li>Migrated key functionality to AWS, cutting infrastructure costs and improving server efficiency by 25%.</li>
+            <li>Led sprint planning with product owners, completing 90% of prioritised user stories.</li>
+          </ul>
+          <div class="chips"><span>Python</span><span>Django</span><span>AWS</span></div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono">Aug 2021 - Mar 2022</div>
+          <h3>Software Engineer <span>&middot; Infogain</span></h3>
+          <ul>
+            <li>Developed Python and Django features for a US electrical equipment manufacturer.</li>
+            <li>Raised test coverage by 21% and automated 100+ regression cases with Selenium.</li>
+          </ul>
+          <div class="chips"><span>Python</span><span>pytest</span><span>Selenium</span></div>
+        </li>
+        <li class="timeline__item reveal">
+          <div class="timeline__meta mono">Jul 2017 - Jul 2021</div>
+          <h3>B.Tech Computer Engineering <span>&middot; Bharati Vidyapeeth College of Engineering</span></h3>
+          <ul>
+            <li>Co-authored a paper on stress detection using facial landmarking techniques.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
 
-				<!-- Footer -->
-				<footer id="footer">
-					<div class="inner">
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/apngupta/" class="icon brands alt fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://github.com/Arpangpta/" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-							<li><a href="https://www.facebook.com/itsapn.gupta/" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="https://www.instagram.com/its_apn.gupta/" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="https://x.com/apn_gupta" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
-						</ul>
-					</div>
-				</footer>
-			</div>
+    <!-- Projects -->
+    <section class="section" id="projects">
+      <div class="section__head reveal">
+        <span class="section__index mono">04</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="cards cards--projects">
+        <a class="card card--link reveal tilt" href="https://github.com/Arpangpta/Identifying-Colon-Cancer-Using-Deep-Learning" target="_blank" rel="noopener">
+          <div class="card__tag mono">Deep Learning &middot; PyTorch</div>
+          <h3>Colon Cancer Cell Classification</h3>
+          <p>A CNN with batch normalisation and data augmentation that classifies histopathology images of cell nuclei into 4 types: cancer, immune, connective and normal epithelial.</p>
+          <span class="card__more mono">view on GitHub &rarr;</span>
+        </a>
+        <a class="card card--link reveal tilt" href="https://github.com/Arpangpta/Sportify-Football-Chatbot" target="_blank" rel="noopener">
+          <div class="card__tag mono">Conversational AI &middot; MSc</div>
+          <h3>Sportify: Football Chatbot</h3>
+          <p>A task-oriented dialogue system for Premier League football on Dialogflow CX, pulling live data through webhooks running on Google Cloud Functions.</p>
+          <span class="card__more mono">view on GitHub &rarr;</span>
+        </a>
+        <div class="card reveal tilt">
+          <div class="card__tag mono">Robotics &middot; MSc</div>
+          <h3>Baxter Robot Playing Chess</h3>
+          <p>A simulated Baxter robot that picks and places chess pieces by the rules of the game, built with ROS, Gazebo and Python.</p>
+        </div>
+      </div>
+    </section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    <!-- Skills -->
+    <section class="section" id="skills">
+      <div class="section__head reveal">
+        <span class="section__index mono">05</span>
+        <h2>Skills</h2>
+      </div>
+      <div class="skills">
+        <div class="skill-group reveal">
+          <h3>Generative AI &amp; LLMs</h3>
+          <div class="chips"><span>Amazon Bedrock</span><span>Claude Sonnet &amp; Haiku</span><span>Nova</span><span>Titan Embeddings</span><span>Prompt engineering</span><span>Structured outputs</span><span>Tool calling</span><span>Model routing</span><span>vLLM</span><span>PyTorch</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Agents &amp; Orchestration</h3>
+          <div class="chips"><span>Multi-agent workflows</span><span>MCP servers</span><span>Orkes Conductor</span><span>LangGraph</span><span>Bedrock Agents</span><span>Guardrails</span><span>Human-in-the-loop</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>RAG &amp; Evaluation</h3>
+          <div class="chips"><span>Bedrock Knowledge Bases</span><span>Vector &amp; hybrid search</span><span>Chunking</span><span>Reranking</span><span>Query routing</span><span>LLM-as-judge</span><span>Hallucination tracking</span><span>Cost optimisation</span></div>
+        </div>
+        <div class="skill-group reveal">
+          <h3>Engineering</h3>
+          <div class="chips"><span>Python</span><span>TypeScript</span><span>Node.js</span><span>Django</span><span>Angular</span><span>PostgreSQL</span><span>pgvector</span><span>SQL Server</span><span>Redis</span><span>AWS</span><span>Docker</span><span>Jenkins</span><span>Zoho Catalyst &amp; CRM</span></div>
+        </div>
+      </div>
+    </section>
 
-	</body>
+    <!-- Beyond code -->
+    <section class="section section--compact" id="beyond">
+      <div class="section__head reveal">
+        <span class="section__index mono">06</span>
+        <h2>Beyond code</h2>
+      </div>
+      <p class="beyond reveal">
+        My time in Scotland turned me into a hiker: the Old Man of Storr, the Cairngorms and Goatfell on Arran so far,
+        with Ben Nevis next on the list. I also discovered kayaking on Loch Lomond, and I'm hooked.
+      </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="contact__inner reveal">
+        <span class="section__index mono">07</span>
+        <h2>Let's build something <span class="grad">intelligent</span>.</h2>
+        <p>I'm open to Applied AI and AI product engineering roles. The fastest way to reach me is email.</p>
+        <div class="contact__links">
+          <a class="btn btn--primary" href="mailto:itsapn.gupta@gmail.com">itsapn.gupta@gmail.com</a>
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/apngupta/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn btn--ghost" href="https://github.com/Arpangpta" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer mono">
+    <span>&copy; <span id="year">2026</span> Arpan Gupta</span>
+    <span>AI Product Engineer &middot; India</span>
+  </footer>
+
+  <script src="js/scene.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
 </html>
